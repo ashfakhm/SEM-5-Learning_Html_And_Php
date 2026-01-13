@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Program 2</title>
+    <style>
+        body {
+            font-family: Helvetica;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+        }
+        table {
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 6px 12px;
+            margin-top: 10px;
+            border: 1px solid #aaa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2><b>Passion Form</b></h2>
+    <form action="Form Illustration  Submission.html">
+        <table>
+            <tr>
+                <td><label>Choose Your Department:</label></td>
+                <td>
+                    <input type="radio" id="cs" name="dept">
+                    <label for="cs">CS</label><br>
+                    <input type="radio" id="Maths" name="dept">
+                    <label for="Maths">Maths</label><br>
+                    <input type="radio" id="Chemistry" name="dept">
+                    <label for="Chemistry">Chemistry</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Choose Your Hobbies:</label></td>
+                <td>
+                    <input type="checkbox" id="Reading">
+                    <label for="Reading">Reading</label><br>
+                    <input type="checkbox" id="Writing">
+                    <label for="Writing">Writing</label><br>
+                    <input type="checkbox" id="Gaming">
+                    <label for="Gaming">Gaming</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="district">Choose Your District:</label></td>
+                <td>
+                    <select name="district" id="district">
+                        <option value="Default">Select Your District</option>
+                        <option value="Malappuram">Malappuram</option>
+                        <option value="Kozhikode">Kozhikode</option>
+                        <option value="Kannur">Kannur</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" name="submit" value="Submit">
+                    <input type="reset" name="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

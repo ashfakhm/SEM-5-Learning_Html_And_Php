@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Event Registration Form</title>
+<script>
+function validateForm(){
+  let name = document.forms["myForm"]["name"].value;
+  let email = document.forms["myForm"]["email"].value;
+  let phone = document.forms["myForm"]["phone"].value;
+  let department = document.forms["myForm"]["department"].value;
+  let year = document.forms["myForm"]["year"].value;
+
+  if (name == "") {
+    alert("Full Name must be filled out.");
+    return false;
+  }
+  const namePattern = /^[A-Za-z.\s]+$/;
+  if (!namePattern.test(name)) {
+    alert("Name can't contain special characters.");
+    return false;
+  }
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.(com|in|org|edu)$/i;
+  if (!emailPattern.test(email)) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+
+  if (isNaN(phone) || phone.length != 10) {
+    alert("Please enter a valid 10-digit phone number.");
+    return false;
+  }
+
+  if (department == "") {
+    alert("Please select a department.");
+    return false;
+  }
+
+  if (year == "") {
+    alert("Please select your year of study.");
+    return false;
+  }
+
+  alert("Form submitted successfully!");
+  return true;
+}
+</script>
+</head>
+<body>
+
+<h2>Event Registration Form</h2>
+<form name="myForm" onsubmit="return validateForm()">
+
+  <label for="name">Full Name:</label><br>
+  <input type="text" name="name" id="name"><br><br>
+
+  <label for="email">Email:</label><br>
+  <input type="text" name="email" id="email"><br><br>
+
+  <label for="phone">Phone Number:</label><br>
+  <input type="text" name="phone" id="phone"><br><br>
+
+  <label for="department">Department:</label><br>
+  <select name="department" id="department">
+    <option value="">--Select Department--</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="Electronics">Electronics</option>
+    <option value="Mechanical">Mechanical</option>
+    <option value="Civil">Civil</option>
+    <option value="Electrical">Electrical</option>
+  </select><br><br>
+
+  <label for="year">Year of Study:</label><br>
+  <select name="year" id="year">
+    <option value="">--Select Year--</option>
+    <option value="1">1st Year</option>
+    <option value="2">2nd Year</option>
+    <option value="3">3rd Year</option>
+    <option value="4">4th Year</option>
+  </select><br><br>
+
+  <input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>
+

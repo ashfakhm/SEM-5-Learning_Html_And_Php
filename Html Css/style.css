@@ -1,0 +1,11 @@
+body {
+       font-family: Helvetica;
+}
+h1{ 
+ font-size: x-small;
+ }
+h2{font-size: smaller;}
+h3{font-size: large;}
+h4{font-size: larger;}
+h5{font-size: x-large;}
+h6{font-size: xx-large;}

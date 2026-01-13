@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change Background Color</title>
+    </head>
+    <body>
+        <h2>Click To Change Background Color</h2>
+        <button onclick="changecolor()">Change Color</button>
+        <script>
+            var Colors = ["lightblue", "lightgreen", "lavender", "coral", "yellow","purple","brown","black","maroon"];
+            var index = 0;
+            
+            function changecolor() {
+                document.body.style.backgroundColor = Colors[index]; 
+                index++;
+
+                if (index >= Colors.length) { 
+                    index = 0;
+                }
+            }
+        </script>
+    </body>
+</html>

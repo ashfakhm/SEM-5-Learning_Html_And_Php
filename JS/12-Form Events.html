@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Event Demonstration</title>
+    <style>
+        body {
+            font-family: Helvetica;
+            padding: 30px;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 8px;
+        }
+        #output {
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            alert("Page Loaded Successfully (onLoad event)");
+        };
+        function handleClick() {
+            document.getElementById("output").innerText = "Button clicked (onClick event)";
+        }
+        function handleBlur() {
+            document.getElementById("output").innerText = "Input Lost Focus (onBlur event)";
+        }
+        function handleChange() {
+            let color = document.getElementById("colorSelect").value; 
+            document.getElementById("output").innerText = "You Selected: " + color + " (onChange event)";
+        }
+        function handleSubmit(event) {
+            event.preventDefault();
+            document.getElementById("output").innerText = "Form submitted (onSubmit event)";
+        }
+    </script>
+</head>
+<body>
+    <h2>Javascript Events Demo</h2>
+    <form onsubmit="handleSubmit(event)">
+        <label> Enter Your Name:</label><br>
+        <input type="text" onblur="handleBlur()"><br>
+
+        <label> Select a color:</label><br>
+        <select id="colorSelect" onchange="handleChange()">
+            <option value="">--Choose--</option>
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
+        </select><br>
+        <button type="button" onclick="handleClick()">Click Me</button><br>
+        <input type="submit" value="Submit Form">
+    </form>
+
+    <div id="output"></div>
+</body>
+</html>
