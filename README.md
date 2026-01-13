@@ -327,6 +327,8 @@ For questions, issues, or suggestions regarding this learning repository, please
 
 ---
 
+**About This Repository**: This program was completed during the pursuit of BSc Computer Science at Farook College, as part of the 5th Semester lab cycle covering HTML, PHP, and JavaScript fundamentals.
+
 **Last Updated**: January 2026  
 **Status**: Active Learning Repository  
 **Difficulty Level**: Beginner to Intermediate
