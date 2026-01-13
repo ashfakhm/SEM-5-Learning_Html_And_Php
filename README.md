@@ -307,7 +307,15 @@ Contributions are welcome! To contribute:
 
 ---
 
-## 📝 License
+## � Collaborators
+
+This project was developed in collaboration with:
+
+- **[@MNK-21](https://github.com/MNK-21)** - Collaborated on various modules and implementations
+
+---
+
+## �📝 License
 
 This project is provided as educational material. Please check institutional guidelines for usage rights.
 
