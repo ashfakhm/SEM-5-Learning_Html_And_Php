@@ -60,6 +60,7 @@ SEM-5-Learning_Html_And_Php/
 │   ├── 07-Inline css.html
 │   ├── 08-External css.html
 │   ├── 09-Image gallery.html
+│   ├── Form Illustration  Submission.html
 │   └── style.css                    # Shared CSS styles
 ├── JS/                              # JavaScript implementations
 │   ├── 10-Area and Circumference of Circle.html
@@ -81,7 +82,9 @@ SEM-5-Learning_Html_And_Php/
 │   ├── 25. Product database .php
 │   ├── 26. Database - update and update.php
 │   ├── 27. List of fruits.php
-│   └── 28. Array operations.php
+│   ├── 28. Array operations.php
+│   └── Php Databse/                 # Database SQL files
+│       └── NA.sql                   # Database schema
 └── README.md                        # This file
 ```
 
@@ -145,11 +148,11 @@ Before you begin, ensure you have the following installed:
 
 ## 📚 Modules
 
-### Module 1: HTML & CSS Fundamentals (Files 01-09)
+### Module 1: HTML & CSS Fundamentals (Files 01-09 + Form Submission)
 
 Covers form design, CSS styling techniques, and responsive layouts:
 
-- Form illustration and structure
+- Form illustration and structure with submission handling
 - CSS implementation methods (internal, external, inline)
 - Image galleries and layout techniques
 
@@ -220,17 +223,18 @@ php filename.php
 
 ### HTML & CSS Directory
 
-| File                       | Description                                   |
-| -------------------------- | --------------------------------------------- |
-| 01-Form Illustration - I   | Basic form structure and HTML elements        |
-| 02-Form Illustration - II  | Advanced form design with various input types |
-| 03-Form Illustration - III | Complex form layouts and grouping             |
-| 04-Fieldset and legend     | Form organization with fieldset elements      |
-| 05-Internal css            | Styling using `<style>` tags                  |
-| 06-Text alignment          | Text alignment and typography                 |
-| 07-Inline css              | Direct element styling with inline CSS        |
-| 08-External css            | CSS file linking and modular styling          |
-| 09-Image gallery           | Image display and gallery layouts             |
+| File                         | Description                                   |
+| ---------------------------- | --------------------------------------------- |
+| 01-Form Illustration - I     | Basic form structure and HTML elements        |
+| 02-Form Illustration - II    | Advanced form design with various input types |
+| 03-Form Illustration - III   | Complex form layouts and grouping             |
+| 04-Fieldset and legend       | Form organization with fieldset elements      |
+| 05-Internal css              | Styling using `<style>` tags                  |
+| 06-Text alignment            | Text alignment and typography                 |
+| 07-Inline css                | Direct element styling with inline CSS        |
+| 08-External css              | CSS file linking and modular styling          |
+| 09-Image gallery             | Image display and gallery layouts             |
+| Form Illustration Submission | Form submission and data handling example     |
 
 ### JavaScript Directory
 
