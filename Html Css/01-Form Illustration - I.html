@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Form Success 1</title>
-<style>
-    body{
-        font-family:Helvetica;
-        text-align:center;
-    }
+  <head>
+    <title>Form Program 1</title>
+    <style>
+      body {
+        font-family: Helvetica;
+      }
+      td {
+        padding: 3px;
+      }
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
     </style>
-</head>
-<body>
-<h2>Form submitted succesfully!!</h2>
-</body>
+  </head>
+  <body>
+    <center>
+      <h2>User Login Form</h2>
+      <form action="Form Illustration  Submission.html">
+        <table>
+          <tr>
+            <td><label for="fname">FirstName</label></td>
+            <td>
+              <input
+                type="text"
+                name="username"
+                id="fname"
+                value="Type Name Here"
+              /><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="password">Password</label></td>
+            <td>
+              <input
+                type="password"
+                name="Password"
+                id="password"
+                value="*******"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="location">Location</label></td>
+            <td>
+              <textarea name="location" rows="4" id="location"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;<input type="submit" name="submit" /></td>
+            <td>
+              <input type="Reset" name="Reset" id="Reset" /><br />
+              <td></td>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </center>
+  </body>
 </html>

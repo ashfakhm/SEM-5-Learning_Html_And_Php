@@ -1,86 +1,117 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Form Program 2</title>
+  <head>
+    <title>Form Program 3</title>
     <style>
-        body {
-            font-family: Helvetica;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            justify-content: center;
-        }
-        .container {
-            text-align: center;
-        }
-        table {
-            margin: 0 auto;
-            border: 1px solid #ccc;
-            border-collapse: collapse;
-            padding: 10px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        td {
-            padding: 8px 12px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        input[type="submit"], input[type="reset"] {
-            padding: 6px 12px;
-            margin-top: 10px;
-            border: 1px solid #aaa;
-        }
+      body {
+        font-family: Helvetica, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      .mainform {
+        text-align: center;
+      }
+      table {
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      td {
+        padding: 10px 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      h2 {
+        margin-bottom: 10px;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        padding: 6px 12px;
+        margin-top: 10px;
+        border: 1px solid #aaa;
+      }
+      select[multiple] {
+        width: 100%;
+        height: auto;
+      }
     </style>
-</head>
-<body>
-
-<div class="container">
-    <h2><b>Passion Form</b></h2>
-    <form action="Form Illustration  Submission.html">
+  </head>
+  <body>
+    <div class="mainform">
+      <h2><b>Choose Your Interest</b></h2>
+      <form action="Form Illustration  Submission.html">
         <table>
-            <tr>
-                <td><label>Choose Your Department:</label></td>
-                <td>
-                    <input type="radio" id="cs" name="dept">
-                    <label for="cs">CS</label><br>
-                    <input type="radio" id="Maths" name="dept">
-                    <label for="Maths">Maths</label><br>
-                    <input type="radio" id="Chemistry" name="dept">
-                    <label for="Chemistry">Chemistry</label>
-                </td>
-            </tr>
-            <tr>
-                <td><label>Choose Your Hobbies:</label></td>
-                <td>
-                    <input type="checkbox" id="Reading">
-                    <label for="Reading">Reading</label><br>
-                    <input type="checkbox" id="Writing">
-                    <label for="Writing">Writing</label><br>
-                    <input type="checkbox" id="Gaming">
-                    <label for="Gaming">Gaming</label>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="district">Choose Your District:</label></td>
-                <td>
-                    <select name="district" id="district">
-                        <option value="Default">Select Your District</option>
-                        <option value="Malappuram">Malappuram</option>
-                        <option value="Kozhikode">Kozhikode</option>
-                        <option value="Kannur">Kannur</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align: center;">
-                    <input type="submit" name="submit" value="Submit">
-                    <input type="reset" name="reset" value="Reset">
-                </td>
-            </tr>
+          <tr>
+            <td><label for="city">City:</label></td>
+            <td>
+              <input list="cities" name="city" id="city" />
+              <datalist id="cities">
+                <option value="Malappuram"></option>
+                <option value="Kozhikode"></option>
+                <option value="Kannur"></option>
+              </datalist>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="Fav_Food">Select Your Favorite Food:</label></td>
+            <td>
+              <select name="Fav_Food" id="Fav_Food" multiple size="4">
+                <option value="Default">Select Your Favorite Food</option>
+                <option value="Mandhi">Mandhi</option>
+                <option value="Biriyani">Biriyani</option>
+                <option value="FriedRice">FriedRice</option>
+                <option value="Alfahm">Alfahm</option>
+                <option value="loadedFries">Loaded Fries</option>
+                <option value="Shawaya">Shawaya</option>
+                <option value="Kabza">Kabza</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="Fav_Vehicle"
+                >Select Your Favorite Mode of Travel:</label
+              >
+            </td>
+            <td>
+              <select name="Fav_Vehicle" id="Fav_Vehicle">
+                <option value="Default">
+                  Select Your Favorite Mode of Travel
+                </option>
+                <optgroup label="2 wheeler">
+                  <option value="Bike">Bike</option>
+                  <option value="Scooter">Scooter</option>
+                </optgroup>
+                <optgroup label="3 wheeler">
+                  <option value="Autoriksha Petrol">Autoriksha Petrol</option>
+                  <option value="Autoriksha Electric">
+                    Autoriksha Electric
+                  </option>
+                </optgroup>
+                <optgroup label="4 wheeler">
+                  <option value="Kia">Kia</option>
+                  <option value="Mercedes">Mercedes</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Alto">Alto</option>
+                </optgroup>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center">
+              <input type="submit" name="submit" value="Submit" />
+              <input type="reset" name="reset" value="Reset" />
+            </td>
+          </tr>
         </table>
-    </form>
-</div>
-
-</body>
+      </form>
+    </div>
+  </body>
 </html>
