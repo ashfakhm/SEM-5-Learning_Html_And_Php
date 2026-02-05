@@ -4,11 +4,9 @@ $username = "root";
 $password = "";       
 $dbname = "NA";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 ?>
 
@@ -29,9 +27,9 @@ if ($conn->connect_error) {
         $roll_no = $_POST['roll_no'];
 
         $sql = "SELECT * FROM student WHERE roll_no = $roll_no";
-        $result = $conn->query($sql);
+        $result = mysqli_query($conn, $sql);
 
-        if ($result->num_rows > 0) {
+        if (mysqli_num_rows($result) > 0) {
             echo "<h3>Mark List</h3>";
             echo "<table border='1' cellpadding='5'>
                     <tr>
@@ -40,7 +38,7 @@ if ($conn->connect_error) {
                         <th>Mark</th>
                         <th>Grade</th>
                     </tr>";
-            while ($row = $result->fetch_assoc()) {
+            while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>
                         <td>{$row['roll_no']}</td>
                         <td>{$row['name']}</td>
@@ -54,7 +52,7 @@ if ($conn->connect_error) {
         }
     }
 
-    $conn->close();
+    mysqli_close($conn);
     ?>
 </body>
 </html>
