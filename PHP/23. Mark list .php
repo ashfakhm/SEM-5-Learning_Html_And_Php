@@ -1,14 +1,4 @@
-<?php
-$servername = "localhost";
-$username = "root";  
-$password = "";       
-$dbname = "NA";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-?>
 
 <!DOCTYPE html>
 <html>
@@ -23,6 +13,16 @@ if (!$conn) {
     </form>
 
     <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "NA";
+
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $roll_no = $_POST['roll_no'];
 
