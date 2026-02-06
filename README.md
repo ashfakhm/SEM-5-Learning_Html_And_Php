@@ -132,13 +132,30 @@ Before you begin, ensure you have the following installed:
 
 3. **Configure Database (for PHP modules)**
 
-   ```sql
-   -- Create database
-   CREATE DATABASE college_programs;
+   #### Importing the NA Database
 
-   -- Update connection credentials in PHP files
-   -- Modify database host, username, and password as needed
-   ```
+   The repository includes an exported SQL file (`PHP/Php Databse/NA.sql`) for the NA database. To import it into your MySQL/MariaDB server:
+
+   ##### Using localhost/phpMyAdmin
+   1. Start your local server (XAMPP, WAMP, etc.) and open phpMyAdmin at `http://localhost/phpmyadmin`.
+   2. Click "New" in the left sidebar to create a new database. Name it `NA` and click "Create".
+   3. Select the `NA` database from the sidebar.
+   4. Click the "Import" tab at the top.
+   5. Click "Choose File" and select `NA.sql` from the `PHP/Php Databse/` folder in your project.
+   6. Click "Go" to import. You should see a success message and the tables will be created.
+   7. Update connection credentials in PHP files if needed (host, username, password).
+
+   ##### Using MySQL command line
+   1. Create the database:
+      ```sql
+      CREATE DATABASE NA;
+      ```
+   2. Import the SQL file:
+      ```bash
+      mysql -u <username> -p NA < PHP/Php\ Databse/NA.sql
+      ```
+
+   This will set up all required tables and sample data for the PHP modules.
 
 4. **Open in Browser**
    - Navigate to `http://localhost/<project-path>` or respective file location
@@ -221,49 +238,10 @@ php filename.php
 
 ## 📄 File Descriptions
 
-### HTML & CSS Directory
+### For a full list and description of all files, see:
 
-| File                         | Description                                   |
-| ---------------------------- | --------------------------------------------- |
-| 01-Form Illustration - I     | Basic form structure and HTML elements        |
-| 02-Form Illustration - II    | Advanced form design with various input types |
-| 03-Form Illustration - III   | Complex form layouts and grouping             |
-| 04-Fieldset and legend       | Form organization with fieldset elements      |
-| 05-Internal css              | Styling using `<style>` tags                  |
-| 06-Text alignment            | Text alignment and typography                 |
-| 07-Inline css                | Direct element styling with inline CSS        |
-| 08-External css              | CSS file linking and modular styling          |
-| 09-Image gallery             | Image display and gallery layouts             |
-| Form Illustration Submission | Form submission and data handling example     |
-
-### JavaScript Directory
-
-| File                      | Description                         |
-| ------------------------- | ----------------------------------- |
-| 10-Area and Circumference | Geometric calculations              |
-| 11-Type of Triangles      | Triangle classification algorithm   |
-| 12-Form Events            | Event listener implementation       |
-| 13-Multiplication Table   | Dynamic table generation            |
-| 14-Simple Calculator      | Basic arithmetic operations         |
-| 15-Array Demonstration    | Array methods and manipulation      |
-| 16-Digital Clock          | Real-time clock display             |
-| 17-Form Validation        | Input validation and error handling |
-
-### PHP Directory
-
-| File                              | Description                          |
-| --------------------------------- | ------------------------------------ |
-| 18-Armstrong                      | Armstrong number detection algorithm |
-| 19-Perfect, abundant or deficient | Number classification algorithm      |
-| 20-Fibonacci Series               | Fibonacci sequence generation        |
-| 21-Bio data                       | Personal information form processing |
-| 22-Login page                     | User authentication implementation   |
-| 23-Mark list                      | Student grade management             |
-| 24-Payslip                        | Salary calculation and display       |
-| 25-Product database               | Database CRUD operations             |
-| 26-Database - update and delete   | Advanced database operations         |
-| 27-List of fruits                 | Data presentation from database      |
-| 28-Array operations               | Server-side array manipulation       |
+- [files_reference.md](files_reference.md) — Complete file reference and descriptions
+- [algorithms.md](algorithms.md) — Summary of all algorithms and logic in the repository
 
 ---
 
