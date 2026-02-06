@@ -1,42 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>Triangle Checker</title>
-    </head>
-    <body>
-        <script>
-            let a = parseFloat(prompt("Enter Side A Of the triangle"));
-            let b = parseFloat(prompt("Enter Side B Of the triangle"));
-            let c = parseFloat(prompt("Enter Side C Of the triangle"));
+  <head>
+    <title>Triangle Checker</title>
+  </head>
+  <body>
+    <script>
+      let a = parseFloat(prompt("Enter Side A Of the triangle"));
+      let b = parseFloat(prompt("Enter Side B Of the triangle"));
+      let c = parseFloat(prompt("Enter Side C Of the triangle"));
 
-            if(isNaN(a)||isNaN(b)||isNaN(c)||a<=0||b<=0||c<=0)
-        {
-
-            alert("Please Enter Positive Number For all Sides.");
+      if (isNaN(a) || isNaN(b) || isNaN(c) || a <= 0 || b <= 0 || c <= 0) {
+        alert("Please Enter Positive Number For all Sides.");
+      } else {
+        if (a + b > c && a + c > b && b + c > a) {
+          let type;
+          if (a == b && b == c) {
+            type = "Equilateral";
+          } else if (a == b || b == c || a == c) {
+            type = "Isosceless";
+          } else {
+            type = "Scalene";
+          }
+          let s = (a + b + c) / 2;
+          let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+          alert("The Triangle is Valid.\n Type:" + type + "\n Area:" +area.toFixed(2));
+        } else {
+          alert("The Given Sides Cannot Form a Triangle");
         }
-        else{
-            if(a+b>c && a+c>b && b+c>a)
-        {
-            let type;
-            if(a==b &&b==c)
-        {
-            type="Equilateral";
-        }
-        else if (a==b||b==c||a==c)
-        {
-            type="Isosceless";
-        }
-        else{
-            type="Scalene";
-        }
-        let s=(a+b+c)/2;
-        let area= Math.sqrt(s*(s-a)*(s-b)*(s-c));
-        alert("The Triangle is Valid.\n Type:"+type+"\n Area:" + area.toFixed(2));
-        }
-        else{
-            alert("The Given Sides Cannot Form a Triangle");
-        }
-        }
-        </script>
-    </body>
+      }
+    </script>
+  </body>
 </html>
